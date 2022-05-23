@@ -106,4 +106,6 @@ Vue.component(TypeNav.name , TypeNav )
    3. import '/mock/index' // main.js
    4. 修改 baseURL
 
-14. todo
+14. todo 
+
+15. todo A
