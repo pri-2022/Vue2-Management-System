@@ -101,11 +101,23 @@ Vue.component(TypeNav.name , TypeNav )
 12. 印记中文，docschina.org
 
 13. mock
-   1. create json file
-   2. Mock.mock(url,data)
-   3. import '/mock/index' // main.js
-   4. 修改 baseURL
+      create json file
+      Mock.mock(url,data)
+      import '/mock/index' // main.js
+      修改 baseURL
 
-14. todo 
-
-15. todo A
+14. 数据在 DOM 更新后再绑定到 DOM
+   watch 监听数据变化，通过 watch 监听 datalist 属性值的变化；
+   执行 handler，表示属性值发生变化；
+   nexttick：DOM 完成更新后，执行。
+   ```
+   watch:{
+      dataList:{
+         handler(newValue,oldValue){
+            this.$nextTick( ()=>{
+               ...
+            })
+         }
+      }
+   }
+   ```
